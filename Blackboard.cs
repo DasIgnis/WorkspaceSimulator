@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Emotions
 {
-    public enum MessageType { 
+    public enum MessageType
+    {
         /// <summary>
         /// Повышение зп
         /// </summary>
@@ -70,7 +71,11 @@ namespace Emotions
         /// <summary>
         /// Помощь сотрудников
         /// </summary>
-        HelpFromEmployees
+        HelpFromEmployees,
+        /// <summary>
+        /// Бездействие
+        /// </summary>
+        Inaction
     }
 
     /// <summary>

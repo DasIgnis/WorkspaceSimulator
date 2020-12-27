@@ -132,7 +132,8 @@ namespace EmotionalBlackboard
             var employee = new List<Person>
             {
                 PersonsEnum.Reaction(Workers.All),
-                PersonsEnum.Reaction(Workers.MortgageEmployee)
+                PersonsEnum.Reaction(Workers.MortgageEmployee),
+                PersonsEnum.Reaction(Workers.Student)
             };
 
             Blackboard = new Blackboard
