@@ -69,43 +69,37 @@ namespace EmotionalBlackboard
                 },
                 new BBMessage
                 {
-                    TTL = 2,
+                    TTL = 1,
                     Type = MessageType.CorporativeParty,
                     Name = "Корпоратив"
                 },
                 new BBMessage
                 {
-                    TTL = 3,
+                    TTL = 2,
                     Type = MessageType.NewYearPresents,
                     Name = "Новогодние подарки"
                 },
                 new BBMessage
                 {
-                    TTL = 3,
+                    TTL = 1,
                     Type = MessageType.NewMinorTasks,
                     Name = "Добавить лёгких задач"
                 },
                 new BBMessage
                 {
-                    TTL = 3,
+                    TTL = 1,
                     Type = MessageType.Prize,
                     Name = "Выдать премиальные"
                 },
                 new BBMessage
                 {
-                    TTL = 3,
+                    TTL = 2,
                     Type = MessageType.Downgrade,
                     Name = "Понизить в должности"
                 },
                 new BBMessage
                 {
-                    TTL = 1,
-                    Type = MessageType.Dismiss,
-                    Name = "Уволить"
-                },
-                new BBMessage
-                {
-                    TTL = 3,
+                    TTL = 2,
                     Type = MessageType.Raise,
                     Name = "Повысить в должности"
                 },
@@ -117,19 +111,19 @@ namespace EmotionalBlackboard
                 },
                 new BBMessage
                 {
-                    TTL = 2,
+                    TTL = 1,
                     Type = MessageType.Praise,
                     Name = "Похвалить"
                 },
                 new BBMessage
                 {
-                    TTL = 4,
+                    TTL = 2,
                     Type = MessageType.IssueDayOff,
                     Name = "Выдать выходной"
                 },
                 new BBMessage
                 {
-                    TTL = 3,
+                    TTL = 4,
                     Type = MessageType.SendOnBusinessTrip,
                     Name = "Отправить в командировку"
                 }
@@ -137,61 +131,8 @@ namespace EmotionalBlackboard
 
             var employee = new List<Person>
             {
-                new Person
-                {
-                    Id = null,
-                    Name = "Все"
-                },
-                new Person
-                {
-                    Id = 1,
-                    Employed = true,
-                    Name = "Работник с ипотекой",
-                    Behavior = (message, onSelf) =>
-                    {
-                        if (onSelf)
-                        {
-                            switch (message)
-                            {
-                                case MessageType.Deadline:
-                                    return new EmotionsDelta {SorrowDelta = 0.3, AnxietyDelta = 0.3, BlissDelta = -0.1, HappinessDelta = -0.2};
-                                case MessageType.IncreaseSalary:
-                                    return new EmotionsDelta {SorrowDelta = -0.8, AnxietyDelta = -0.5, BlissDelta = 0.5, HappinessDelta = 0.8};
-                                case MessageType.NewMinorTasks:
-                                    return new EmotionsDelta {SorrowDelta = -0.1, AnxietyDelta = -0.1, BlissDelta = 0.3, HappinessDelta = 0.1};
-                                default:
-                                    return new EmotionsDelta { };
-                            }
-                        }
-                        else
-                        {
-                            switch (message)
-                            {
-                                case MessageType.IncreaseSalary:
-                                    return new EmotionsDelta {SorrowDelta = 0.3, AnxietyDelta = 0.1, HappinessDelta = -0.2, FrustrationDelta = 0.3};
-                                default:
-                                    return new EmotionsDelta { };
-                            }
-                        }
-                    },
-                    CustomReactions = (mood) =>
-                    {
-                        if (mood.Anxiety > 0.9)
-                            return new ActionResult {
-                                Message = "Обидно, досадно, но мне ипотеку платить",
-                                ForBoard = new BBMessage
-                                {
-                                    TTL = 2, 
-                                    Type = MessageType.NewMinorTasks,
-                                    TargetId = null,
-                                    Name = "Сделать баги, которые надо чинить"
-                                }
-                            };
-                        return new ActionResult {
-                                Message = "Мне норм"
-                            };
-                    }
-                }
+                PersonsEnum.Reaction(Workers.All),
+                PersonsEnum.Reaction(Workers.MortgageEmployee)
             };
 
             Blackboard = new Blackboard

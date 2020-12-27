@@ -7,22 +7,70 @@ using System.Threading.Tasks;
 namespace Emotions
 {
     public enum MessageType { 
-        IncreaseSalary, //3
-        DecreaseSalary, //4 
-        ChangeOffice,//5
-        CorporativeParty,//6
-        NewYearPresents,//7
-        NewHardTasks,//2
-        NewMinorTasks,//8
-        Deadline, //1
-        Prize,//9
-        Downgrade,//10
-        Dismiss,//11
-        Raise,//12
-        IssueImportantAssignment,//13
-        Praise,//14
-        IssueDayOff,//15
-        SendOnBusinessTrip//16
+        /// <summary>
+        /// Повышение зп
+        /// </summary>
+        IncreaseSalary,
+        /// <summary>
+        /// Понижение зп
+        /// </summary>
+        DecreaseSalary,
+        /// <summary>
+        /// Смена офиса
+        /// </summary>
+        ChangeOffice,
+        /// <summary>
+        /// Корпоратив
+        /// </summary>
+        CorporativeParty,
+        /// <summary>
+        /// Новогодний подарок
+        /// </summary>
+        NewYearPresents,
+        /// <summary>
+        /// Новая тяжёлая задача
+        /// </summary>
+        NewHardTasks,
+        /// <summary>
+        /// Новая лёгкая задача
+        /// </summary>
+        NewMinorTasks,
+        /// <summary>
+        /// Дедлайн
+        /// </summary>
+        Deadline,
+        /// <summary>
+        /// Премия
+        /// </summary>
+        Prize,
+        /// <summary>
+        /// Понижение
+        /// </summary>
+        Downgrade,
+        /// <summary>
+        /// Повышение
+        /// </summary>
+        Raise,
+        /// <summary>
+        /// Выдача важного задания
+        /// </summary>
+        IssueImportantAssignment,
+        /// <summary>
+        /// Похвала
+        /// </summary>
+        Praise,
+        /// <summary>
+        /// Выдача выходного
+        /// </summary>
+        IssueDayOff,
+        /// <summary>
+        /// Отправление в командировку
+        /// </summary>
+        SendOnBusinessTrip,
+        /// <summary>
+        /// Помощь сотрудников
+        /// </summary>
+        HelpFromEmployees
     }
 
     /// <summary>
@@ -30,10 +78,19 @@ namespace Emotions
     /// </summary>
     public class BBMessage
     {
+        /// <summary>
+        /// Кол-во повторений
+        /// </summary>
         public int TTL { get; set; }
 
+        /// <summary>
+        /// Тип события
+        /// </summary>
         public MessageType Type { get; set; }
 
+        /// <summary>
+        /// Кто будет получать "радость"
+        /// </summary>
         public long? TargetId { get; set; }
         public string Name { get; set; }
 

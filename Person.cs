@@ -11,10 +11,25 @@ namespace Emotions
     /// </summary>
     public class Mood
     {
+        /// <summary>
+        /// Печаль
+        /// </summary>
         public double Sorrow = 0;
+        /// <summary>
+        /// Счастье
+        /// </summary>
         public double Happiness = 0;
+        /// <summary>
+        /// Разочарование 
+        /// </summary>
         public double Frustration = 0;
+        /// <summary>
+        /// Тревога 
+        /// </summary>
         public double Anxiety = 0;
+        /// <summary>
+        /// Блаженство 
+        /// </summary>
         public double Bliss = 0;
 
         public void Apply(EmotionsDelta deltaChanges)
@@ -36,10 +51,25 @@ namespace Emotions
 
     public class EmotionsDelta
     {
+        /// <summary>
+        /// Дельта печали 
+        /// </summary>
         public double SorrowDelta { get; set; } = 0;
+        /// <summary>
+        /// Дельта счастья 
+        /// </summary>
         public double HappinessDelta { get; set; } = 0;
+        /// <summary>
+        /// Дельта разочарования 
+        /// </summary>
         public double FrustrationDelta { get; set; } = 0;
+        /// <summary>
+        /// Дельта тревоги 
+        /// </summary>
         public double AnxietyDelta { get; set; } = 0;
+        /// <summary>
+        /// Дельта блаженства 
+        /// </summary>
         public double BlissDelta { get; set; } = 0;
     }
 
