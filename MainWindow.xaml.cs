@@ -54,6 +54,84 @@ namespace EmotionalBlackboard
                     TTL = 4,
                     Type = MessageType.IncreaseSalary,
                     Name = "Повышение зарплаты"
+                },
+                new BBMessage
+                {
+                    TTL = 4,
+                    Type = MessageType.DecreaseSalary,
+                    Name = "Понижение зарплаты"
+                },
+                new BBMessage
+                {
+                    TTL = 6,
+                    Type = MessageType.ChangeOffice,
+                    Name = "Переезд в новый офис"
+                },
+                new BBMessage
+                {
+                    TTL = 2,
+                    Type = MessageType.CorporativeParty,
+                    Name = "Корпоратив"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.NewYearPresents,
+                    Name = "Новогодние подарки"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.NewMinorTasks,
+                    Name = "Добавить лёгких задач"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.Prize,
+                    Name = "Выдать премиальные"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.Downgrade,
+                    Name = "Понизить в должности"
+                },
+                new BBMessage
+                {
+                    TTL = 1,
+                    Type = MessageType.Dismiss,
+                    Name = "Уволить"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.Raise,
+                    Name = "Повысить в должности"
+                },
+                new BBMessage
+                {
+                    TTL = 1,
+                    Type = MessageType.IssueImportantAssignment,
+                    Name = "Выдать важное задание"
+                },
+                new BBMessage
+                {
+                    TTL = 2,
+                    Type = MessageType.Praise,
+                    Name = "Похвалить"
+                },
+                new BBMessage
+                {
+                    TTL = 4,
+                    Type = MessageType.IssueDayOff,
+                    Name = "Выдать выходной"
+                },
+                new BBMessage
+                {
+                    TTL = 3,
+                    Type = MessageType.SendOnBusinessTrip,
+                    Name = "Отправить в командировку"
                 }
             };
 

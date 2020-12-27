@@ -7,14 +7,22 @@ using System.Threading.Tasks;
 namespace Emotions
 {
     public enum MessageType { 
-        IncreaseSalary, 
-        DecreaseSalary,  
-        ChangeOffice,
-        CorporativeParty,
-        NewYearPresents,
-        NewHardTasks,
-        NewMinorTasks,
-        Deadline
+        IncreaseSalary, //3
+        DecreaseSalary, //4 
+        ChangeOffice,//5
+        CorporativeParty,//6
+        NewYearPresents,//7
+        NewHardTasks,//2
+        NewMinorTasks,//8
+        Deadline, //1
+        Prize,//9
+        Downgrade,//10
+        Dismiss,//11
+        Raise,//12
+        IssueImportantAssignment,//13
+        Praise,//14
+        IssueDayOff,//15
+        SendOnBusinessTrip//16
     }
 
     /// <summary>
